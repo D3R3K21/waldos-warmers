@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Page } from './page';
+import { Page as Post } from './post';
 @Component({
   selector: 'app-page',
-  templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.css']
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.css']
 })
-export class PagesComponent {
-pages: Page[] = [
+export class PostsComponent {
+posts: Post[] = [
 {
   message: 'This is not the message',
   pageId: '123456'
