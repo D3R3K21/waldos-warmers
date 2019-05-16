@@ -1,3 +1,16 @@
-<div class="card">
-  <div class="card-header">This is the page Id {{pageId}}</div>
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let comment of comments">
+                    <td>{{ comment.message }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

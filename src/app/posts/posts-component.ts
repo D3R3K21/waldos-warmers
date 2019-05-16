@@ -1,23 +1,15 @@
 import { Component } from '@angular/core';
-import { Page as Post } from './post';
+import { Post } from './post';
+import { FacebookService } from '../services/facebook-service';
+
 @Component({
-  selector: 'app-page',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent {
-posts: Post[] = [
-{
-  message: 'This is not the message',
-  pageId: '123456'
-},
-{
-  message: 'This is the message',
-  pageId: '246810'
-},
-{
-  message: 'This is not the message either',
-  pageId: '98765'
-}];
-
+  constructor(private fbService: FacebookService) {  }
+posts: Post[];
+ngOnInit() {
+  this.fbService.retrievePosts().subscribe(res=> this.posts = res.data);
+}
 }

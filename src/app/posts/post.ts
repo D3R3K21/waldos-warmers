@@ -1,4 +1,4 @@
-export interface Page {
+export interface Post {
   message: string;
-  pageId: string;
+  postId: string;
 }
