@@ -1,4 +1,4 @@
 export interface Post {
   message: string;
-  postId: string;
+  id: string;
 }

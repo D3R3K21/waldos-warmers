@@ -1,3 +1,6 @@
+<ul class='nav nav-pills'>
+     <li><a class='nav-link' [routerLink]="['/posts']">Home.Posts</a></li>
+</ul>
 <div class="card-body">
     <div class="table-responsive">
         <table class="table">
@@ -14,3 +17,9 @@
         </table>
     </div>
 </div>
+<div class="center">
+<button *ngIf="prevLink" (click)="onPrev()">Previous</button>
+    <button *ngIf="nextLink" (click)="onNext()">Next</button>
+</div>
+
+    

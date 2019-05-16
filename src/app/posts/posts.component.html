@@ -1,16 +1,18 @@
 <div class="card-body">
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Posts</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let post of posts">
-                    <td>{{ post.message }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Posts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of posts">
+          <a [routerLink]="['/comments', post.id]">
+            <td>{{ post.message }}</td>
+          </a>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

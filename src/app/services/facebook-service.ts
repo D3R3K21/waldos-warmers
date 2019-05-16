@@ -9,30 +9,45 @@ import { FbPostsResponse } from '../posts/fb-posts-response';
   providedIn: 'root'
 })
 export class FacebookService {
-  constructor(private http: HttpClient) {}
-
-  retrievePosts(): Observable<FbPostsResponse> {
-    return this.http.get<FbPostsResponse>('/api/posts.json').pipe(
-      tap(data => console.log('All: ' + JSON.stringify(data))),
-      catchError(this.handleError));
+  postsAPI = '';
+  commentsAPI = '';
+  token = '';
+  baseURI = '';
+  pageId = '';
+  params = '';
+  constructor(private http: HttpClient) {
+    this.postsAPI = '/api/posts.json';
+    this.commentsAPI = '/api/comments.json';
+    this.baseURI = 'https://graph.facebook.com/v3.3';
+    this.pageId = '1598627693689523';
+    this.token = `EAAIscVOevKABANoIOMlZB8CBVtV6MTqsDgICKaHf8bf8OXaXBOozrCUhpSeSHm
+    jF476cZAERUpmvtGYPj1wGzefVVQ53AQfFmzsFKTYlZBfSOLMVvlz39D138jyE0GRnN43GrbPTWgwtpv1WN2TOZAdteOZBO1mkZD`;
+    this.params = '&pretty=0&limit=25&summary=1&filter=toplevel';
   }
 
-  retrieveComments(): Observable<FbCommentResponse> {
-    return this.http.get<FbCommentResponse>('/api/comments.json').pipe(
-      tap(data => console.log('All: ' + JSON.stringify(data))),
-      catchError(this.handleError));
+  retrievePosts(): Observable<FbPostsResponse> {
+    return this.http.get<FbPostsResponse>(`${this.baseURI}/${this.pageId}/feed?access_token=${this.token}&pretty=0&limit=25`)
+      .pipe(catchError(this.handleError));
+  }
+  retrieveCommentsCount(postId: string): Observable<FbCommentResponse> {
+    let uri=`${this.baseURI}/${postId}/comments?access_token=${this.token}${this.params.replace('&limit=25', '&limit=0')}`;
+    return this.http.get<FbCommentResponse>(uri).pipe(catchError(this.handleError));
+  }
+
+  retrieveComments(postId: string): Observable<FbCommentResponse> {
+    let uri = `${this.baseURI}/${postId}/comments?access_token=${this.token}${this.params}`;
+    return this.http.get<FbCommentResponse>(uri).pipe(catchError(this.handleError));
+  }
+  
+  retrievePaginatedComments(uri: string): Observable<FbCommentResponse> {
+    return this.http.get<FbCommentResponse>(`${uri}${this.params}`).pipe(catchError(this.handleError));
   }
 
   private handleError(err: HttpErrorResponse) {
-    // in a real world app, we may send the server to some remote logging infrastructure
-    // instead of just logging it to the console
     let errorMessage = '';
     if (err.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
       errorMessage = `An error occurred: ${err.error.message}`;
     } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
       errorMessage = `Server returned code: ${err.status}, error message is: ${err.message}`;
     }
     console.error(errorMessage);
