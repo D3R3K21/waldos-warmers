@@ -1,6 +1,9 @@
+<!-- <a href="#2331658840386401_2331678910384394">Go To Winner</a><br/> [attr.href]="selectRandomComment()"-->
+<button [attr.href]="rand" (click)="selectRandomComment()">Go To Winner</button><br/>
 <ul class='nav nav-pills'>
      <li><a class='nav-link' [routerLink]="['/posts']">Home.Posts</a></li>
 </ul>
+<!-- <button (click)="selectRandomComment()">Select Random Comment</button> -->
 <div class="card-body">
     <div class="table-responsive">
         <table class="table">
@@ -11,7 +14,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let comment of comments">
-                    <td>{{ comment.message }}</td>
+                    <td [attr.id]='comment.id' [attr.bgcolor] = 'comment.color'>{{ comment.message }}</td>
                 </tr>
             </tbody>
         </table>

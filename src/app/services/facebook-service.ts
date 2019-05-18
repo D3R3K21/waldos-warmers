@@ -22,7 +22,7 @@ export class FacebookService {
     this.pageId = '1598627693689523';
     this.token = `EAAIscVOevKABANoIOMlZB8CBVtV6MTqsDgICKaHf8bf8OXaXBOozrCUhpSeSHm
     jF476cZAERUpmvtGYPj1wGzefVVQ53AQfFmzsFKTYlZBfSOLMVvlz39D138jyE0GRnN43GrbPTWgwtpv1WN2TOZAdteOZBO1mkZD`;
-    this.params = '&pretty=0&limit=25&summary=1&filter=toplevel';
+    this.params = '&pretty=0&limit=25&summary=1&filter=stream';
   }
 
   retrievePosts(): Observable<FbPostsResponse> {
@@ -38,7 +38,7 @@ export class FacebookService {
     let uri = `${this.baseURI}/${postId}/comments?access_token=${this.token}${this.params}`;
     return this.http.get<FbCommentResponse>(uri).pipe(catchError(this.handleError));
   }
-  
+
   retrievePaginatedComments(uri: string): Observable<FbCommentResponse> {
     return this.http.get<FbCommentResponse>(`${uri}${this.params}`).pipe(catchError(this.handleError));
   }
