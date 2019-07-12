@@ -1,0 +1,42 @@
+.card {
+    background-color: black;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    border-radius: 25px;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+    flex-direction: row;
+  }
+  
+  .ul-no-style {
+    list-style: none;
+  }
+  
+  .a-no-style {
+    color: rgb(9, 209, 9);
+    text-decoration: none;
+    a:link {
+      text-decoration: none;
+    }
+    
+    a:visited {
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    a:active {
+      text-decoration: underline;
+    }
+  }
+  
+  

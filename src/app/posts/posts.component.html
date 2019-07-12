@@ -8,7 +8,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let post of posts">
-          <a [routerLink]="['/comments', post.id]">
+          <a [routerLink]="['/giveaway/comments', post.id]">
             <td>{{ post.message }}</td>
           </a>
         </tr>

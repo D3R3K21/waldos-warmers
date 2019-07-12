@@ -13,9 +13,9 @@ import { CommentsRouteGuard } from '../comments/comments-guard';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path: 'comments/:postId', canActivate: [CommentsRouteGuard], component: CommentsComponent },
-      { path: 'posts', component: PostsComponent },
-      { path: '', redirectTo: 'posts', pathMatch: 'full' }
+      { path: 'giveaway/comments/:postId', canActivate: [CommentsRouteGuard], component: CommentsComponent },
+      { path: 'giveaway/posts', component: PostsComponent },
+      { path: 'giveaway', redirectTo: 'giveaway/posts', pathMatch: 'full' }
     ]),
   ]
 })
