@@ -25,10 +25,13 @@ export class FacebookService {
     this.params = '&pretty=0&limit=25&summary=1&filter=stream';
   }
 
-  retrievePosts(): Observable<FbPostsResponse> {
+  retrievePosts(pageId: string, token: string): Observable<FbPostsResponse> {
     return this.http.get<FbPostsResponse>(`${this.baseURI}/${this.pageId}/feed?access_token=${this.token}&pretty=0&limit=25`)
       .pipe(catchError(this.handleError));
+    // return this.http.get<FbPostsResponse>(`${this.baseURI}/${pageId}/feed?access_token=${token}&pretty=0&limit=25`)
+    //   .pipe(catchError(this.handleError));
   }
+
   retrieveCommentsCount(postId: string): Observable<FbCommentResponse> {
     let uri=`${this.baseURI}/${postId}/comments?access_token=${this.token}${this.params.replace('&limit=25', '&limit=0')}`;
     return this.http.get<FbCommentResponse>(uri).pipe(catchError(this.handleError));

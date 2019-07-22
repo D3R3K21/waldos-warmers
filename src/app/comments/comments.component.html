@@ -1,26 +1,21 @@
-<button [attr.href]="rand" (click)="selectRandomComment()">Go To Winner</button><br/>
-<ul class='nav nav-pills'>
-     <li><a class='nav-link' [routerLink]="['/giveaway/posts']">Home.Posts</a></li>
-</ul>
-<div class="card-body">
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Comments</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let comment of comments">
-                    <td [attr.id]='comment.id' [attr.bgcolor] = 'comment.color'>{{ comment.message }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class='card-body main-spa'>
+  <span style="text-align:right; display:block;"><button (click)='selectRandomComment()' id='winnerBtn'>Go To Winner</button></span><br />
+  <div class='table-responsive'>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let comment of comments'>
+          <td [attr.id]='comment.id' [attr.bgcolor]='comment.color' class='a-no-style'>{{ comment.message }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-<div class="center">
-<button *ngIf="prevLink" (click)="onPrev()">Previous</button>
-    <button *ngIf="nextLink" (click)="onNext()">Next</button>
+<div class='center'>
+  <button *ngIf='prevLink' (click)='onPrev()'>Previous</button>
+  <button *ngIf='nextLink' (click)='onNext()'>Next</button>
 </div>
-
-    

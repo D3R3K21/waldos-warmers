@@ -4,6 +4,7 @@ import { PostsComponent } from '../posts/posts-component';
 import { CommentsComponent } from '../comments/comments.component';
 import { RouterModule } from '@angular/router';
 import { CommentsRouteGuard } from '../comments/comments-guard';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { CommentsRouteGuard } from '../comments/comments-guard';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
       { path: 'giveaway/comments/:postId', canActivate: [CommentsRouteGuard], component: CommentsComponent },
       { path: 'giveaway/posts', component: PostsComponent },

@@ -6,50 +6,59 @@ import { FbComment } from './fb-comment';
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
-  styleUrls: ['./comments.component.css']
+  styleUrls: ['./comments.component.scss']
 })
 export class CommentsComponent implements OnInit {
   comments: FbComment[] = [];
   prevLink = '';
   nextLink = '';
   postId = '';
-  rand = '';
-  constructor(private route: ActivatedRoute, private fbService: FacebookService, private router: Router) {
-
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private fbService: FacebookService
+  ) {}
 
   ngOnInit() {
     this.postId = this.route.snapshot.paramMap.get('postId');
     this.fbService.retrieveComments(this.postId).subscribe(res => {
       this.comments = res.data;
-      this.rand = this.comments[0].id;
       this.prevLink = res.paging.previous;
       this.nextLink = res.paging.next;
-      console.log(`total returned from facebook ${res.summary.total_count}`)
-      if(this.nextLink) {
+      if (this.nextLink) {
         this.loadNextComments();
       }
     });
   }
 
-  selectRandomComment(): string {
-    if(this.comments.length <= 0) {
+  selectRandomComment(): void {
+    if (this.comments.length <= 0) {
       return;
     }
-    let index = Math.floor(Math.random() * this.comments.length);
-    let comment = this.comments[index];
+    const index = Math.floor(Math.random() * this.comments.length);
+    const comment = this.comments[index];
     comment.color = 'b5d100';
-    return '#' + comment.id;
+
+    var element = document.getElementById(comment.id);
+
+    element.scrollIntoView();
+    element.scrollIntoView(false);
+    element.scrollIntoView({ block: 'end' });
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+      inline: 'nearest'
+    });
   }
   loadNextComments(): void {
     this.fbService.retrievePaginatedComments(this.nextLink).subscribe(res => {
-      this.comments = this.comments.concat(res.data.map(c =>{
-        c.color = '#FFFFFF';
-        return c;
-      }));
+      this.comments = this.comments.concat(
+        res.data.map(c => {
+          c.color = '#FFFFFF';
+          return c;
+        })
+      );
       this.nextLink = res.paging.next;
-      console.log(`total ammount actually recieved from facebook ${this.comments.length}`)
-      if(this.nextLink) {
+      if (this.nextLink) {
         this.loadNextComments();
       }
     });
@@ -60,9 +69,6 @@ export class CommentsComponent implements OnInit {
       count = res.summary.total_count;
     });
     return count;
-  }
-  onBack(): void {
-    this.router.navigate(['/posts']);
   }
 
   onPrev(): void {
@@ -75,6 +81,7 @@ export class CommentsComponent implements OnInit {
       this.nextLink = res.paging.next;
     });
   }
+
   onNext(): void {
     this.fbService.retrievePaginatedComments(this.nextLink).subscribe(res => {
       this.comments = res.data.map(c => {
@@ -84,8 +91,5 @@ export class CommentsComponent implements OnInit {
       this.prevLink = res.paging.previous;
       this.nextLink = res.paging.next;
     });
-
-
   }
-
 }

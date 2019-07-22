@@ -1,27 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from './post';
 import { FacebookService } from '../services/facebook-service';
-import { SSL_OP_SINGLE_DH_USE } from 'constants';
-import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 @Component({
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css']
+  styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
   id = 0;
   bgc = '00d1d1';
+
+  pageInput = '';
+  tokenInput = '';
+
   constructor(private fbService: FacebookService) { }
 
   posts: Post[];
 
-  getId(): number {
-    this.id++;
-    return this.id + 0;
+  ngOnInit() {
+
   }
 
-  ngOnInit() {
-    this.fbService.retrievePosts().subscribe(res => {
+  doThings() {
+    console.log(this.pageInput);
+    console.log(this.tokenInput);
+
+    this.fbService.retrievePosts(this.pageInput, this.tokenInput).subscribe(res => {
       this.posts = res.data;
     });
   }
