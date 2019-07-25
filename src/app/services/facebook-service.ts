@@ -19,9 +19,8 @@ export class FacebookService {
     this.postsAPI = '/api/posts.json';
     this.commentsAPI = '/api/comments.json';
     this.baseURI = 'https://graph.facebook.com/v3.3';
-    this.pageId = '1598627693689523';
-    this.token = `EAAIscVOevKABANoIOMlZB8CBVtV6MTqsDgICKaHf8bf8OXaXBOozrCUhpSeSHm
-    jF476cZAERUpmvtGYPj1wGzefVVQ53AQfFmzsFKTYlZBfSOLMVvlz39D138jyE0GRnN43GrbPTWgwtpv1WN2TOZAdteOZBO1mkZD`;
+    this.pageId = 'pageid';
+    this.token = `token`;
     this.params = '&pretty=0&limit=25&summary=1&filter=stream';
   }
 

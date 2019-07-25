@@ -23,6 +23,62 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/about/about.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/about/about.component.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/about/about.component.html":
+/*!********************************************!*\
+  !*** ./src/app/about/about.component.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p class='main-spa'>\n  about works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/about/about.component.ts":
+/*!******************************************!*\
+  !*** ./src/app/about/about.component.ts ***!
+  \******************************************/
+/*! exports provided: AboutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AboutComponent = /** @class */ (function () {
+    function AboutComponent() {
+    }
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-about',
+            template: __webpack_require__(/*! ./about.component.html */ "./src/app/about/about.component.html"),
+            styles: [__webpack_require__(/*! ./about.component.css */ "./src/app/about/about.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], AboutComponent);
+    return AboutComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.html":
 /*!************************************!*\
   !*** ./src/app/app.component.html ***!
@@ -95,10 +151,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _shared_giveaway_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shared/giveaway.module */ "./src/app/shared/giveaway.module.ts");
 /* harmony import */ var _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./navigation/navigation.component */ "./src/app/navigation/navigation.component.ts");
-/* harmony import */ var _testing_div_testing_div_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./testing-div/testing-div.component */ "./src/app/testing-div/testing-div.component.ts");
-/* harmony import */ var _testing_list_div_testing_list_div_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./testing-list-div/testing-list-div.component */ "./src/app/testing-list-div/testing-list-div.component.ts");
-/* harmony import */ var _testing_nested_divs_testing_nested_divs_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./testing-nested-divs/testing-nested-divs.component */ "./src/app/testing-nested-divs/testing-nested-divs.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ngrx/store-devtools */ "./node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
 
 
 
@@ -109,6 +167,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+//import { reducers } from './reducers';
+
+//import { AppEffects } from './app.effects';
 
 
 var AppModule = /** @class */ (function () {
@@ -119,16 +181,17 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
                 _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_7__["NavigationComponent"],
-                _testing_div_testing_div_component__WEBPACK_IMPORTED_MODULE_8__["TestingDivComponent"],
-                _testing_list_div_testing_list_div_component__WEBPACK_IMPORTED_MODULE_9__["TestingListDivComponent"],
-                _testing_nested_divs_testing_nested_divs_component__WEBPACK_IMPORTED_MODULE_10__["TestingNestedDivsComponent"]
+                _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot([], { useHash: true }),
-                _shared_giveaway_module__WEBPACK_IMPORTED_MODULE_6__["GiveawayModule"]
+                _shared_giveaway_module__WEBPACK_IMPORTED_MODULE_6__["GiveawayModule"],
+                _ngrx_store__WEBPACK_IMPORTED_MODULE_10__["StoreModule"].forRoot({}),
+                _ngrx_effects__WEBPACK_IMPORTED_MODULE_11__["EffectsModule"].forRoot([]),
+                _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_12__["StoreDevtoolsModule"].instrument({ maxAge: 25, logOnly: _environments_environment__WEBPACK_IMPORTED_MODULE_13__["environment"].production })
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
@@ -173,17 +236,6 @@ var CommentsRouteGuard = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/comments/comments.component.css":
-/*!*************************************************!*\
-  !*** ./src/app/comments/comments.component.css ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".center {\r\n    text-align:center;\r\n}\r\n\r\n#winnerBtn {\r\n    width: 150px;\r\n    position: relative;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tbWVudHMvY29tbWVudHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9jb21tZW50cy9jb21tZW50cy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNlbnRlciB7XHJcbiAgICB0ZXh0LWFsaWduOmNlbnRlcjtcclxufVxyXG5cclxuI3dpbm5lckJ0biB7XHJcbiAgICB3aWR0aDogMTUwcHg7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbn0iXX0= */"
-
-/***/ }),
-
 /***/ "./src/app/comments/comments.component.html":
 /*!**************************************************!*\
   !*** ./src/app/comments/comments.component.html ***!
@@ -191,7 +243,18 @@ module.exports = ".center {\r\n    text-align:center;\r\n}\r\n\r\n#winnerBtn {\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='card-body main-spa'>\r\n  <span style=\"text-align:right; display:block;\"><button (click)='selectRandomComment()' id='winnerBtn'>Go To Winner</button></span><br />\r\n  <div class='table-responsive'>\r\n    <table class='table'>\r\n      <thead>\r\n        <tr>\r\n          <th>Comments</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor='let comment of comments'>\r\n          <td [attr.id]='comment.id' [attr.bgcolor]='comment.color'>{{ comment.message }}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n<div class='center'>\r\n  <button *ngIf='prevLink' (click)='onPrev()'>Previous</button>\r\n  <button *ngIf='nextLink' (click)='onNext()'>Next</button>\r\n</div>\r\n"
+module.exports = "<div class='card-body main-spa'>\r\n  <span style=\"text-align:right; display:block;\"><button (click)='selectRandomComment()' id='winnerBtn'>Go To Winner</button></span><br />\r\n  <div class='table-responsive'>\r\n    <table class='table'>\r\n      <thead>\r\n        <tr>\r\n          <th>Comments</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor='let comment of comments'>\r\n          <td [attr.id]='comment.id' [attr.bgcolor]='comment.color' class='a-no-style'>{{ comment.message }}</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n<div class='center'>\r\n  <button *ngIf='prevLink' (click)='onPrev()'>Previous</button>\r\n  <button *ngIf='nextLink' (click)='onNext()'>Next</button>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/comments/comments.component.scss":
+/*!**************************************************!*\
+  !*** ./src/app/comments/comments.component.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".center {\n  text-align: center; }\n\n#winnerBtn {\n  width: 150px;\n  position: relative; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tbWVudHMvQzpcXHNvdXJjZVxcZ2l0aHViXFx3YWxkb3Mtd2FybWVycy9zcmNcXGFwcFxcY29tbWVudHNcXGNvbW1lbnRzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQWlCLEVBQUE7O0FBR3JCO0VBQ0ksWUFBWTtFQUNaLGtCQUFrQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvY29tbWVudHMvY29tbWVudHMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2VudGVyIHtcclxuICAgIHRleHQtYWxpZ246Y2VudGVyO1xyXG59XHJcblxyXG4jd2lubmVyQnRuIHtcclxuICAgIHdpZHRoOiAxNTBweDtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -209,14 +272,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_facebook_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/facebook-service */ "./src/app/services/facebook-service.ts");
+/* harmony import */ var _posts_state_posts_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../posts/state/posts.reducer */ "./src/app/posts/state/posts.reducer.ts");
+/* harmony import */ var _posts_state_posts_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../posts/state/posts.actions */ "./src/app/posts/state/posts.actions.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+
+
+
 
 
 
 
 var CommentsComponent = /** @class */ (function () {
-    function CommentsComponent(route, fbService) {
+    function CommentsComponent(route, fbService, store) {
         this.route = route;
         this.fbService = fbService;
+        this.store = store;
         this.comments = [];
         this.prevLink = '';
         this.nextLink = '';
@@ -225,14 +295,16 @@ var CommentsComponent = /** @class */ (function () {
     CommentsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.postId = this.route.snapshot.paramMap.get('postId');
-        this.fbService.retrieveComments(this.postId).subscribe(function (res) {
-            _this.comments = res.data;
-            _this.prevLink = res.paging.previous;
-            _this.nextLink = res.paging.next;
-            if (_this.nextLink) {
-                _this.loadNextComments();
-            }
-        });
+        this.store.dispatch(new _posts_state_posts_actions__WEBPACK_IMPORTED_MODULE_5__["LoadComments"](this.postId));
+        this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["select"])(_posts_state_posts_reducer__WEBPACK_IMPORTED_MODULE_4__["getPosts"])).subscribe(function (comments) { return _this.comments = comments; });
+        // this.fbService.retrieveComments(this.postId).subscribe(res => {
+        //   this.comments = res.data;
+        //   this.prevLink = res.paging.previous;
+        //   this.nextLink = res.paging.next;
+        //   if (this.nextLink) {
+        //     this.loadNextComments();
+        //   }
+        // });
     };
     CommentsComponent.prototype.selectRandomComment = function () {
         if (this.comments.length <= 0) {
@@ -297,12 +369,69 @@ var CommentsComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-comments',
             template: __webpack_require__(/*! ./comments.component.html */ "./src/app/comments/comments.component.html"),
-            styles: [__webpack_require__(/*! ./comments.component.css */ "./src/app/comments/comments.component.css")]
+            styles: [__webpack_require__(/*! ./comments.component.scss */ "./src/app/comments/comments.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
-            _services_facebook_service__WEBPACK_IMPORTED_MODULE_3__["FacebookService"]])
+            _services_facebook_service__WEBPACK_IMPORTED_MODULE_3__["FacebookService"],
+            _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]])
     ], CommentsComponent);
     return CommentsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.html":
+/*!******************************************!*\
+  !*** ./src/app/home/home.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p class='main-spa'>\n  home works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.scss":
+/*!******************************************!*\
+  !*** ./src/app/home/home.component.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/home/home.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/home/home.component.ts ***!
+  \****************************************/
+/*! exports provided: HomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeComponent", function() { return HomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var HomeComponent = /** @class */ (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'home',
+            template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
+            styles: [__webpack_require__(/*! ./home.component.scss */ "./src/app/home/home.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], HomeComponent);
+    return HomeComponent;
 }());
 
 
@@ -316,7 +445,7 @@ var CommentsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav>\n  <ul class=\"flex-container ul-no-style\">\n    <li class=\"card\"><a class=\"a-no-style\" href=\"#/\">Home</a></li>\n    <li class=\"card\"><a class=\"a-no-style\" href=\"#/giveaway\">Give Away</a></li>\n    <li class=\"card\"><a class=\"a-no-style\" href=\"#/about-us\">About Us</a></li>\n  </ul>\n</nav>"
+module.exports = "<nav>\n  <ul class=\"flex-container ul-no-style\">\n    <li class=\"card active\" (click)='clicked($event)'><a class=\"a-no-style\" href=\"#/home\">Home</a></li>\n    <li class=\"card\" (click)='clicked($event)'><a class=\"a-no-style\" href=\"#/giveaway\">Give Away</a></li>\n    <li class=\"card\" (click)='clicked($event)'><a class=\"a-no-style\" href=\"#/about-us\">About Us</a></li>\n  </ul>\n</nav>"
 
 /***/ }),
 
@@ -327,7 +456,7 @@ module.exports = "<nav>\n  <ul class=\"flex-container ul-no-style\">\n    <li cl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card {\n  background-color: black;\n  width: 100px;\n  margin: 10px;\n  text-align: center;\n  line-height: 25px;\n  font-size: 12px;\n  border-radius: 25px; }\n\n.flex-container {\n  display: flex;\n  flex-wrap: nowrap;\n  background-color: white;\n  flex-direction: row;\n  justify-content: center; }\n\n.ul-no-style {\n  list-style: none; }\n\n.a-no-style {\n  color: #09d109;\n  text-decoration: none; }\n\n.a-no-style a:link {\n    text-decoration: none; }\n\n.a-no-style a:visited {\n    text-decoration: none; }\n\n.a-no-style a:hover {\n    text-decoration: underline; }\n\n.a-no-style a:active {\n    text-decoration: underline; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2aWdhdGlvbi9DOlxcc291cmNlXFxnaXRodWJcXHdhbGRvcy13YXJtZXJzL3NyY1xcYXBwXFxuYXZpZ2F0aW9uXFxuYXZpZ2F0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQXVCO0VBQ3ZCLFlBQVk7RUFDWixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2YsbUJBQW1CLEVBQUE7O0FBR3JCO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLHVCQUF1QixFQUFBOztBQUd6QjtFQUNFLGdCQUFnQixFQUFBOztBQUdsQjtFQUNFLGNBQXFCO0VBQ3JCLHFCQUFxQixFQUFBOztBQUZ2QjtJQUlJLHFCQUFxQixFQUFBOztBQUp6QjtJQVFJLHFCQUFxQixFQUFBOztBQVJ6QjtJQVlJLDBCQUEwQixFQUFBOztBQVo5QjtJQWdCSSwwQkFBMEIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL25hdmlnYXRpb24vbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgd2lkdGg6IDEwMHB4O1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgbGluZS1oZWlnaHQ6IDI1cHg7XHJcbiAgICBmb250LXNpemU6IDEycHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiAyNXB4O1xyXG4gIH1cclxuICBcclxuICAuZmxleC1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogbm93cmFwO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgfVxyXG4gIFxyXG4gIC51bC1uby1zdHlsZSB7XHJcbiAgICBsaXN0LXN0eWxlOiBub25lO1xyXG4gIH1cclxuICBcclxuICAuYS1uby1zdHlsZSB7XHJcbiAgICBjb2xvcjogcmdiKDksIDIwOSwgOSk7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICBhOmxpbmsge1xyXG4gICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIGE6dmlzaXRlZCB7XHJcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIH1cclxuICAgIFxyXG4gICAgYTpob3ZlciB7XHJcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICBhOmFjdGl2ZSB7XHJcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICAiXX0= */"
+module.exports = ".card {\n  background-color: black;\n  width: 100px;\n  margin: 10px;\n  text-align: center;\n  line-height: 25px;\n  font-size: 12px;\n  border-radius: 25px; }\n\n.flex-container {\n  display: flex;\n  flex-wrap: nowrap;\n  background-color: white;\n  flex-direction: row;\n  justify-content: center; }\n\n.ul-no-style {\n  list-style: none; }\n\n.active {\n  color: white; }\n\n.active {\n  color: white; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2aWdhdGlvbi9DOlxcc291cmNlXFxnaXRodWJcXHdhbGRvcy13YXJtZXJzL3NyY1xcYXBwXFxuYXZpZ2F0aW9uXFxuYXZpZ2F0aW9uLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsdUJBQXVCO0VBQ3ZCLFlBQVk7RUFDWixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2YsbUJBQW1CLEVBQUE7O0FBR3JCO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQix1QkFBdUI7RUFDdkIsbUJBQW1CO0VBQ25CLHVCQUF1QixFQUFBOztBQUd6QjtFQUNFLGdCQUFnQixFQUFBOztBQUdsQjtFQUNFLFlBQVksRUFBQTs7QUFJZDtFQUNFLFlBQVksRUFBQSIsImZpbGUiOiJzcmMvYXBwL25hdmlnYXRpb24vbmF2aWdhdGlvbi5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXJkIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcclxuICB3aWR0aDogMTAwcHg7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBsaW5lLWhlaWdodDogMjVweDtcclxuICBmb250LXNpemU6IDEycHg7XHJcbiAgYm9yZGVyLXJhZGl1czogMjVweDtcclxufVxyXG5cclxuLmZsZXgtY29udGFpbmVyIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtd3JhcDogbm93cmFwO1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuXHJcbi51bC1uby1zdHlsZSB7XHJcbiAgbGlzdC1zdHlsZTogbm9uZTtcclxufVxyXG5cclxuLmFjdGl2ZSB7XHJcbiAgY29sb3I6IHdoaXRlO1xyXG4gLy8gYmFja2dyb3VuZDogZ3JlZW47XHJcbn1cclxuXHJcbi5hY3RpdmUge1xyXG4gIGNvbG9yOiB3aGl0ZTsgXHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -349,6 +478,12 @@ var NavigationComponent = /** @class */ (function () {
     function NavigationComponent() {
     }
     NavigationComponent.prototype.ngOnInit = function () {
+    };
+    NavigationComponent.prototype.clicked = function (event) {
+        var current = document.getElementsByClassName('active');
+        current[0].className = current[0].className.replace('active', '');
+        event.currentTarget.className += ' active';
+        console.log('clicked');
     };
     NavigationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -378,53 +513,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_facebook_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/facebook-service */ "./src/app/services/facebook-service.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _posts_state_posts_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../posts/state/posts.reducer */ "./src/app/posts/state/posts.reducer.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
 
 
 
 var PostsComponent = /** @class */ (function () {
-    function PostsComponent(fbService) {
+    function PostsComponent(fbService, store) {
         this.fbService = fbService;
+        this.store = store;
         this.id = 0;
         this.bgc = '00d1d1';
+        this.componentActive = true;
         this.pageInput = '';
         this.tokenInput = '';
+        this.idInput = '';
     }
-    PostsComponent.prototype.getId = function () {
-        this.id++;
-        return this.id + 0;
-    };
     PostsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.fbService.retrievePosts().subscribe(function (res) {
-            _this.posts = res.data;
+        this.store.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["takeWhile"])(function () { return _this.componentActive; }), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["select"])(_posts_state_posts_reducer__WEBPACK_IMPORTED_MODULE_4__["getSelectedPostId"]))
+            .subscribe(function (currentProduct) {
+            _this.idInput = currentProduct;
         });
     };
     PostsComponent.prototype.doThings = function () {
-        console.log(this.pageInput);
-        console.log(this.tokenInput);
+        var _this = this;
+        this.fbService.retrievePosts(this.pageInput, this.tokenInput).subscribe(function (res) {
+            _this.posts = res.data;
+        });
+    };
+    PostsComponent.prototype.ngOnDestroy = function () {
+        this.componentActive = false;
     };
     PostsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             template: __webpack_require__(/*! ./posts.component.html */ "./src/app/posts/posts.component.html"),
-            styles: [__webpack_require__(/*! ./posts.component.css */ "./src/app/posts/posts.component.css")]
+            styles: [__webpack_require__(/*! ./posts.component.scss */ "./src/app/posts/posts.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_facebook_service__WEBPACK_IMPORTED_MODULE_2__["FacebookService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_facebook_service__WEBPACK_IMPORTED_MODULE_2__["FacebookService"], _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"]])
     ], PostsComponent);
     return PostsComponent;
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/posts/posts.component.css":
-/*!*******************************************!*\
-  !*** ./src/app/posts/posts.component.css ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Bvc3RzL3Bvc3RzLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -435,7 +570,171 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card-body main-spa\">\r\n  <div class=\"table-responsive\">\r\n    \r\n      <label>\r\n          Page Id\r\n          <input type=\"text\" name=\"pageInput1\"  [(ngModel)]=\"pageInput\">\r\n       </label>\r\n       <label>\r\n          Token:\r\n          <input type=\"text\" name=\"tokenInput\">\r\n       </label>\r\n       <button (click)='doThings()'>Do The Things</button>\r\n    <table class=\"table\">\r\n      <thead>\r\n        <tr>\r\n          <th>Posts</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let post of posts\">\r\n          <a [routerLink]=\"['/giveaway/comments', post.id]\">\r\n            <td>{{ post.message }}</td>\r\n          </a>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"card-body main-spa\">\r\n  <div class=\"table-responsive\">\r\n      \r\n      <label>\r\n          Page Id\r\n          <input type=\"text\" name=\"pageInput\"  [(ngModel)]=\"pageInput\">\r\n          ?\r\n       </label>\r\n       <label>\r\n          Token:\r\n          <input type=\"text\" name=\"tokenInput\"  [(ngModel)]=\"tokenInput\">\r\n       </label>\r\n       <button (click)='doThings()'>Do The Things</button>\r\n    <table class=\"table\">\r\n      <thead>\r\n        <tr>\r\n          <th>Posts</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let post of posts\">\r\n          <a [routerLink]=\"['/giveaway/comments', post.id]\" class='a-no-style'>\r\n            <td>{{ post.message }}</td>\r\n          </a>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n\r\n<span>Id goes here: {{idInput}}</span>"
+
+/***/ }),
+
+/***/ "./src/app/posts/posts.component.scss":
+/*!********************************************!*\
+  !*** ./src/app/posts/posts.component.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Bvc3RzL3Bvc3RzLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/posts/state/posts.actions.ts":
+/*!**********************************************!*\
+  !*** ./src/app/posts/state/posts.actions.ts ***!
+  \**********************************************/
+/*! exports provided: PostActionTypes, LoadComments, LoadingComments, CommentsLoaded, LoadFail */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostActionTypes", function() { return PostActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadComments", function() { return LoadComments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadingComments", function() { return LoadingComments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommentsLoaded", function() { return CommentsLoaded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadFail", function() { return LoadFail; });
+var PostActionTypes;
+(function (PostActionTypes) {
+    PostActionTypes["LoadComments"] = "[Posts] Load Comments";
+    PostActionTypes["LoadingComments"] = "[Posts] Loading Comments";
+    PostActionTypes["CommentsLoaded"] = "[Posts] Comments Loaded";
+    PostActionTypes["LoadFail"] = "[Posts] Load Fail";
+})(PostActionTypes || (PostActionTypes = {}));
+var LoadComments = /** @class */ (function () {
+    function LoadComments(payload) {
+        this.payload = payload;
+        this.type = PostActionTypes.LoadComments;
+    }
+    return LoadComments;
+}());
+
+var LoadingComments = /** @class */ (function () {
+    function LoadingComments(payload) {
+        this.payload = payload;
+        this.type = PostActionTypes.LoadingComments;
+    }
+    return LoadingComments;
+}());
+
+var CommentsLoaded = /** @class */ (function () {
+    function CommentsLoaded(payload) {
+        this.payload = payload;
+        this.type = PostActionTypes.CommentsLoaded;
+    }
+    return CommentsLoaded;
+}());
+
+var LoadFail = /** @class */ (function () {
+    function LoadFail(payload) {
+        this.payload = payload;
+        this.type = PostActionTypes.LoadFail;
+    }
+    return LoadFail;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/posts/state/posts.effects.ts":
+/*!**********************************************!*\
+  !*** ./src/app/posts/state/posts.effects.ts ***!
+  \**********************************************/
+/*! exports provided: PostEffects */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostEffects", function() { return PostEffects; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_services_facebook_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/facebook-service */ "./src/app/services/facebook-service.ts");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var _posts_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./posts.actions */ "./src/app/posts/state/posts.actions.ts");
+/* harmony import */ var _posts_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./posts.reducer */ "./src/app/posts/state/posts.reducer.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+
+
+
+
+
+
+
+
+var PostEffects = /** @class */ (function () {
+    function PostEffects(actions$, service, store) {
+        this.actions$ = actions$;
+        this.service = service;
+        this.store = store;
+        this.loadComments$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_3__["ofType"])(_posts_actions__WEBPACK_IMPORTED_MODULE_4__["PostActionTypes"].LoadComments), Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["select"])(_posts_reducer__WEBPACK_IMPORTED_MODULE_5__["getSelectedPostId"]), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (x) {
+            console.log('testing effects');
+            return x;
+        }));
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_3__["Effect"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], PostEffects.prototype, "loadComments$", void 0);
+    PostEffects = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ngrx_effects__WEBPACK_IMPORTED_MODULE_3__["Actions"],
+            src_app_services_facebook_service__WEBPACK_IMPORTED_MODULE_2__["FacebookService"],
+            _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["Store"]])
+    ], PostEffects);
+    return PostEffects;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/posts/state/posts.reducer.ts":
+/*!**********************************************!*\
+  !*** ./src/app/posts/state/posts.reducer.ts ***!
+  \**********************************************/
+/*! exports provided: reducer, getProductFeatureState, getSelectedPostId, getPosts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProductFeatureState", function() { return getProductFeatureState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSelectedPostId", function() { return getSelectedPostId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _posts_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./posts.actions */ "./src/app/posts/state/posts.actions.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+
+
+
+var initialState = {
+    posts: [],
+    error: '',
+    selectedPostId: ''
+};
+function reducer(state, action) {
+    if (state === void 0) { state = initialState; }
+    switch (action.type) {
+        case _posts_actions__WEBPACK_IMPORTED_MODULE_1__["PostActionTypes"].CommentsLoaded:
+            console.log('testing reducer: comments loaded');
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { posts: action.payload });
+        case _posts_actions__WEBPACK_IMPORTED_MODULE_1__["PostActionTypes"].LoadComments:
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { selectedPostId: action.payload });
+        default:
+            return state;
+    }
+}
+var getProductFeatureState = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createFeatureSelector"])('posts');
+var getSelectedPostId = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getProductFeatureState, function (s) { return s.selectedPostId; });
+var getPosts = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getProductFeatureState, function (s) { return s.posts; });
+
 
 /***/ }),
 
@@ -471,13 +770,15 @@ var FacebookService = /** @class */ (function () {
         this.postsAPI = '/api/posts.json';
         this.commentsAPI = '/api/comments.json';
         this.baseURI = 'https://graph.facebook.com/v3.3';
-        this.pageId = '1598627693689523';
-        this.token = "EAAIscVOevKABANoIOMlZB8CBVtV6MTqsDgICKaHf8bf8OXaXBOozrCUhpSeSHm\n    jF476cZAERUpmvtGYPj1wGzefVVQ53AQfFmzsFKTYlZBfSOLMVvlz39D138jyE0GRnN43GrbPTWgwtpv1WN2TOZAdteOZBO1mkZD";
+        this.pageId = 'pageid';
+        this.token = "token";
         this.params = '&pretty=0&limit=25&summary=1&filter=stream';
     }
-    FacebookService.prototype.retrievePosts = function () {
+    FacebookService.prototype.retrievePosts = function (pageId, token) {
         return this.http.get(this.baseURI + "/" + this.pageId + "/feed?access_token=" + this.token + "&pretty=0&limit=25")
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        // return this.http.get<FbPostsResponse>(`${this.baseURI}/${pageId}/feed?access_token=${token}&pretty=0&limit=25`)
+        //   .pipe(catchError(this.handleError));
     };
     FacebookService.prototype.retrieveCommentsCount = function (postId) {
         var uri = this.baseURI + "/" + postId + "/comments?access_token=" + this.token + this.params.replace('&limit=25', '&limit=0');
@@ -531,6 +832,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _comments_comments_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../comments/comments.component */ "./src/app/comments/comments.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _comments_comments_guard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../comments/comments-guard */ "./src/app/comments/comments-guard.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../about/about.component */ "./src/app/about/about.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _posts_state_posts_reducer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../posts/state/posts.reducer */ "./src/app/posts/state/posts.reducer.ts");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var _posts_state_posts_effects__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../posts/state/posts.effects */ "./src/app/posts/state/posts.effects.ts");
+
+
+
+
+
+
+
 
 
 
@@ -549,204 +864,20 @@ var GiveawayModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
                     { path: 'giveaway/comments/:postId', canActivate: [_comments_comments_guard__WEBPACK_IMPORTED_MODULE_6__["CommentsRouteGuard"]], component: _comments_comments_component__WEBPACK_IMPORTED_MODULE_4__["CommentsComponent"] },
                     { path: 'giveaway/posts', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_3__["PostsComponent"] },
+                    { path: 'about-us', component: _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"] },
+                    { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"] },
                     { path: 'giveaway', redirectTo: 'giveaway/posts', pathMatch: 'full' }
                 ]),
+                _ngrx_store__WEBPACK_IMPORTED_MODULE_10__["StoreModule"].forFeature('posts', _posts_state_posts_reducer__WEBPACK_IMPORTED_MODULE_11__["reducer"]),
+                _ngrx_effects__WEBPACK_IMPORTED_MODULE_12__["EffectsModule"].forFeature([_posts_state_posts_effects__WEBPACK_IMPORTED_MODULE_13__["PostEffects"]]),
             ]
         })
     ], GiveawayModule);
     return GiveawayModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/testing-div/testing-div.component.html":
-/*!********************************************************!*\
-  !*** ./src/app/testing-div/testing-div.component.html ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"flexBox\" id=\"myDiv\">\n    <a href=\"#\" class=\"myCard active\" (click)=\"clicked($event)\">Card 1</a>\n    <a href=\"#\" class=\"myCard\" (click)=\"clicked($event)\">Card 2</a>\n    <a href=\"#\" class=\"myCard\" (click)=\"clicked($event)\">Card 3</a>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/testing-div/testing-div.component.scss":
-/*!********************************************************!*\
-  !*** ./src/app/testing-div/testing-div.component.scss ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".myCard {\n  width: 100px;\n  height: 50px;\n  background: green;\n  margin: 10px;\n  position: absolute;\n  left: 0px; }\n\n.active {\n  z-index: 100;\n  background: purple; }\n\n.flexBox {\n  display: flex;\n  flex-direction: column;\n  background: pink;\n  width: 100px; }\n\na {\n  color: black;\n  font-weight: 500;\n  display: block; }\n\n.flexBox:hover .myCard {\n  width: 100px;\n  height: 50px;\n  margin: 2px;\n  position: initial;\n  left: initial; }\n\n.flexBox:hover .myCard:not(.active) {\n  background: yellow; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVzdGluZy1kaXYvQzpcXHNvdXJjZVxcZ2l0aHViXFx3YWxkb3Mtd2FybWVycy9zcmNcXGFwcFxcdGVzdGluZy1kaXZcXHRlc3RpbmctZGl2LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksWUFBVztFQUNYLFlBQVc7RUFDWCxpQkFBaUI7RUFDakIsWUFBVztFQUNYLGtCQUFrQjtFQUNsQixTQUFTLEVBQUE7O0FBR2I7RUFDSSxZQUFZO0VBQ1osa0JBQWtCLEVBQUE7O0FBR3RCO0VBQ0ksYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixnQkFBZ0I7RUFDaEIsWUFBVyxFQUFBOztBQUdmO0VBQ0UsWUFBVztFQUNYLGdCQUFnQjtFQUNoQixjQUFjLEVBQUE7O0FBR2hCO0VBRVEsWUFBVztFQUNYLFlBQVc7RUFFWCxXQUFVO0VBQ1YsaUJBQWlCO0VBQ2pCLGFBQWEsRUFBQTs7QUFQckI7RUFXUSxrQkFBa0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3Rlc3RpbmctZGl2L3Rlc3RpbmctZGl2LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm15Q2FyZCB7XHJcbiAgICB3aWR0aDoxMDBweDtcclxuICAgIGhlaWdodDo1MHB4O1xyXG4gICAgYmFja2dyb3VuZDogZ3JlZW47XHJcbiAgICBtYXJnaW46MTBweDtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDBweDtcclxufVxyXG5cclxuLmFjdGl2ZSB7XHJcbiAgICB6LWluZGV4OiAxMDA7XHJcbiAgICBiYWNrZ3JvdW5kOiBwdXJwbGU7XHJcbn1cclxuXHJcbi5mbGV4Qm94IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgYmFja2dyb3VuZDogcGluaztcclxuICAgIHdpZHRoOjEwMHB4O1xyXG59XHJcblxyXG5hIHtcclxuICBjb2xvcjpibGFjaztcclxuICBmb250LXdlaWdodDogNTAwO1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG59XHJcblxyXG4uZmxleEJveDpob3ZlciB7XHJcbiAgICAubXlDYXJkIHtcclxuICAgICAgICB3aWR0aDoxMDBweDtcclxuICAgICAgICBoZWlnaHQ6NTBweDtcclxuICAgICAgICBcclxuICAgICAgICBtYXJnaW46MnB4O1xyXG4gICAgICAgIHBvc2l0aW9uOiBpbml0aWFsO1xyXG4gICAgICAgIGxlZnQ6IGluaXRpYWw7XHJcbiAgICB9XHJcblxyXG4gICAgLm15Q2FyZDpub3QoLmFjdGl2ZSkge1xyXG4gICAgICAgIGJhY2tncm91bmQ6IHllbGxvdztcclxuICAgIH1cclxuXHJcbiAgICBhOmhvdmVyIHtcclxuICAgICAgICBcclxuICAgIH1cclxufSJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/testing-div/testing-div.component.ts":
-/*!******************************************************!*\
-  !*** ./src/app/testing-div/testing-div.component.ts ***!
-  \******************************************************/
-/*! exports provided: TestingDivComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestingDivComponent", function() { return TestingDivComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var TestingDivComponent = /** @class */ (function () {
-    function TestingDivComponent() {
-    }
-    TestingDivComponent.prototype.ngOnInit = function () {
-        // var header = document.getElementById('myDiv');
-        // var btns = header.getElementsByClassName('myCard');
-        // for (var i = 0; i < btns.length; i++) {
-        //   btns[i].addEventListener('click', function() {
-        //     var current = document.getElementsByClassName('active');
-        //     current[0].className = current[0].className.replace(' active', '');
-        //     this.className += ' active';
-        //   });
-        // }
-    };
-    TestingDivComponent.prototype.clicked = function (event) {
-        // var current = document.getElementsByClassName('active');
-        // current[0].className = current[0].className.replace(' active', '');
-        // event.currentTarget.className += ' active';
-        // console.log('clicked');
-    };
-    TestingDivComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-testing-div',
-            template: __webpack_require__(/*! ./testing-div.component.html */ "./src/app/testing-div/testing-div.component.html"),
-            styles: [__webpack_require__(/*! ./testing-div.component.scss */ "./src/app/testing-div/testing-div.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], TestingDivComponent);
-    return TestingDivComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/testing-list-div/testing-list-div.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/testing-list-div/testing-list-div.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<ul class=\"nav-list\">\n    <li><a href=\"#\" class=\"active\" (click)=\"clicked($event)\">Testing The Thing 1</a></li>\n    <li><a href=\"#\" (click)=\"clicked($event)\">Testing The Thing 2</a></li>\n</ul>"
-
-/***/ }),
-
-/***/ "./src/app/testing-list-div/testing-list-div.component.scss":
-/*!******************************************************************!*\
-  !*** ./src/app/testing-list-div/testing-list-div.component.scss ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".nav-list {\n  list-style: none;\n  display: block;\n  position: absolute; }\n  .nav-list .active {\n    display: block !important;\n    background: green; }\n  .nav-list li {\n    background: yellow; }\n  .nav-list li :not(.active) {\n      display: none; }\n  .nav-list :not(:first-child) {\n    margin-top: 10px !important; }\n  ul:hover :not(.active) {\n  display: block !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVzdGluZy1saXN0LWRpdi9DOlxcc291cmNlXFxnaXRodWJcXHdhbGRvcy13YXJtZXJzL3NyY1xcYXBwXFx0ZXN0aW5nLWxpc3QtZGl2XFx0ZXN0aW5nLWxpc3QtZGl2LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWdCO0VBQ2hCLGNBQWM7RUFDZCxrQkFBa0IsRUFBQTtFQUh0QjtJQUtRLHlCQUF5QjtJQUN6QixpQkFBaUIsRUFBQTtFQU56QjtJQWFRLGtCQUFrQixFQUFBO0VBYjFCO01BV1ksYUFBYSxFQUFBO0VBWHpCO0lBaUJRLDJCQUEyQixFQUFBO0VBSW5DO0VBRVEseUJBQXlCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC90ZXN0aW5nLWxpc3QtZGl2L3Rlc3RpbmctbGlzdC1kaXYuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubmF2LWxpc3Qge1xyXG4gICAgbGlzdC1zdHlsZTogbm9uZTtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgLmFjdGl2ZSB7XHJcbiAgICAgICAgZGlzcGxheTogYmxvY2sgIWltcG9ydGFudDtcclxuICAgICAgICBiYWNrZ3JvdW5kOiBncmVlbjtcclxuICAgIH1cclxuXHJcbiAgICBsaSB7XHJcbiAgICAgICAgOm5vdCguYWN0aXZlKSB7XHJcbiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7XHJcbiAgICAgICAgfSAgICAgICBcclxuICAgICAgICBiYWNrZ3JvdW5kOiB5ZWxsb3c7XHJcbiAgICB9XHJcblxyXG4gICAgOm5vdCg6Zmlyc3QtY2hpbGQpIHtcclxuICAgICAgICBtYXJnaW4tdG9wOiAxMHB4ICFpbXBvcnRhbnQ7IFxyXG4gICAgfVxyXG59XHJcblxyXG51bDpob3ZlciB7XHJcbiAgICA6bm90KC5hY3RpdmUpIHtcclxuICAgICAgICBkaXNwbGF5OiBibG9jayAhaW1wb3J0YW50O1xyXG4gICAgfVxyXG59Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/testing-list-div/testing-list-div.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/testing-list-div/testing-list-div.component.ts ***!
-  \****************************************************************/
-/*! exports provided: TestingListDivComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestingListDivComponent", function() { return TestingListDivComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var TestingListDivComponent = /** @class */ (function () {
-    function TestingListDivComponent() {
-    }
-    TestingListDivComponent.prototype.ngOnInit = function () {
-    };
-    TestingListDivComponent.prototype.clicked = function (event) {
-        // var current = document.getElementsByClassName('active');
-        // current[0].className = current[0].className.replace('active', '');
-        // event.currentTarget.className += ' active';
-        // console.log('clicked');
-    };
-    TestingListDivComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-testing-list-div',
-            template: __webpack_require__(/*! ./testing-list-div.component.html */ "./src/app/testing-list-div/testing-list-div.component.html"),
-            styles: [__webpack_require__(/*! ./testing-list-div.component.scss */ "./src/app/testing-list-div/testing-list-div.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], TestingListDivComponent);
-    return TestingListDivComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/testing-nested-divs/testing-nested-divs.component.html":
-/*!************************************************************************!*\
-  !*** ./src/app/testing-nested-divs/testing-nested-divs.component.html ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div id=\"main-div\">\n  <div id=\"otherNestedDiv\">\n      <div class=\"nestedDiv\">1</div>\n      <div class=\"nestedDiv\">2</div>\n  </div>\n\n    <div class=\"nestedDiv\">3</div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/testing-nested-divs/testing-nested-divs.component.scss":
-/*!************************************************************************!*\
-  !*** ./src/app/testing-nested-divs/testing-nested-divs.component.scss ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".nestedDiv {\n  background: yellow;\n  margin: 5px;\n  flex-grow: 1; }\n\n#main-div {\n  margin-top: 100px;\n  display: flex;\n  flex-direction: row;\n  width: 50%; }\n\n#main-div /deep/ > div::before {\n    content: '';\n    margin: 18px;\n    height: 50px; }\n\n#main-div /deep/ > div:not(:first-child)::before {\n    border-left: 1.5px solid #d4d4d4; }\n\n#otherNestedDiv {\n  display: flex;\n  flex-direction: row;\n  flex-grow: 1; }\n\n#otherNestedDiv /deep/ > div::before {\n    content: '';\n    margin: 18px;\n    height: 50px; }\n\n#otherNestedDiv /deep/ > div:not(:first-child)::before {\n    border-left: 1.5px solid #d4d4d4; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGVzdGluZy1uZXN0ZWQtZGl2cy9DOlxcc291cmNlXFxnaXRodWJcXHdhbGRvcy13YXJtZXJzL3NyY1xcYXBwXFx0ZXN0aW5nLW5lc3RlZC1kaXZzXFx0ZXN0aW5nLW5lc3RlZC1kaXZzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQWtCO0VBQ2xCLFdBQVU7RUFDVixZQUFZLEVBQUE7O0FBR2hCO0VBQ0ksaUJBQWdCO0VBQ2hCLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsVUFBVSxFQUFBOztBQUpkO0lBT0UsV0FBVztJQUNYLFlBQVk7SUFDWixZQUFZLEVBQUE7O0FBVGQ7SUFhRSxnQ0FBZ0MsRUFBQTs7QUFJbEM7RUFDSSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLFlBQVksRUFBQTs7QUFIaEI7SUFNRSxXQUFXO0lBQ1gsWUFBWTtJQUNaLFlBQVksRUFBQTs7QUFSZDtJQVlFLGdDQUFnQyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvdGVzdGluZy1uZXN0ZWQtZGl2cy90ZXN0aW5nLW5lc3RlZC1kaXZzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5lc3RlZERpdiB7XHJcbiAgICBiYWNrZ3JvdW5kOiB5ZWxsb3c7XHJcbiAgICBtYXJnaW46NXB4O1xyXG4gICAgZmxleC1ncm93OiAxO1xyXG59XHJcblxyXG4jbWFpbi1kaXYge1xyXG4gICAgbWFyZ2luLXRvcDoxMDBweDsgXHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgIHdpZHRoOiA1MCU7XHJcblxyXG4gICAgJiAvZGVlcC8gPiBkaXY6OmJlZm9yZSB7XHJcblx0XHRjb250ZW50OiAnJztcclxuXHRcdG1hcmdpbjogMThweDtcclxuXHRcdGhlaWdodDogNTBweDtcclxuXHR9XHJcblxyXG5cdCYgL2RlZXAvID4gZGl2Om5vdCg6Zmlyc3QtY2hpbGQpOjpiZWZvcmUge1xyXG5cdFx0Ym9yZGVyLWxlZnQ6IDEuNXB4IHNvbGlkICNkNGQ0ZDQ7XHJcblx0fVxyXG59XHJcbiBcclxuI290aGVyTmVzdGVkRGl2IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAgZmxleC1ncm93OiAxO1xyXG5cclxuICAgICYgL2RlZXAvID4gZGl2OjpiZWZvcmUge1xyXG5cdFx0Y29udGVudDogJyc7XHJcblx0XHRtYXJnaW46IDE4cHg7XHJcblx0XHRoZWlnaHQ6IDUwcHg7XHJcblx0fVxyXG5cclxuXHQmIC9kZWVwLyA+IGRpdjpub3QoOmZpcnN0LWNoaWxkKTo6YmVmb3JlIHtcclxuXHRcdGJvcmRlci1sZWZ0OiAxLjVweCBzb2xpZCAjZDRkNGQ0O1xyXG5cdH1cclxufVxyXG5cclxuIl19 */"
-
-/***/ }),
-
-/***/ "./src/app/testing-nested-divs/testing-nested-divs.component.ts":
-/*!**********************************************************************!*\
-  !*** ./src/app/testing-nested-divs/testing-nested-divs.component.ts ***!
-  \**********************************************************************/
-/*! exports provided: TestingNestedDivsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestingNestedDivsComponent", function() { return TestingNestedDivsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var TestingNestedDivsComponent = /** @class */ (function () {
-    function TestingNestedDivsComponent() {
-    }
-    TestingNestedDivsComponent.prototype.ngOnInit = function () {
-    };
-    TestingNestedDivsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-testing-nested-divs',
-            template: __webpack_require__(/*! ./testing-nested-divs.component.html */ "./src/app/testing-nested-divs/testing-nested-divs.component.html"),
-            styles: [__webpack_require__(/*! ./testing-nested-divs.component.scss */ "./src/app/testing-nested-divs/testing-nested-divs.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], TestingNestedDivsComponent);
-    return TestingNestedDivsComponent;
 }());
 
 

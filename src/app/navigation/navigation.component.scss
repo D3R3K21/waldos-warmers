@@ -1,30 +1,30 @@
 .card {
-    background-color: black;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 25px;
-    font-size: 12px;
-    border-radius: 25px;
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: white;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .ul-no-style {
-    list-style: none;
-  }
-
-  .active {
-    //display: block !important;
-    background: green;
+  background-color: black;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  border-radius: 25px;
 }
-  
-  
-  
-  
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: white;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.ul-no-style {
+  list-style: none;
+}
+
+.active {
+  color: white;
+ // background: green;
+}
+
+.active {
+  color: white; 
+}

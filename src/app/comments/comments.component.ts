@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FacebookService } from '../services/facebook-service';
 import { FbComment } from './fb-comment';
+import * as fromPosts from '../posts/state/posts.reducer';
+import * as postActions from '../posts/state/posts.actions';
+import { Store, select } from '@ngrx/store';
+
 
 @Component({
   selector: 'app-comments',
@@ -15,19 +19,24 @@ export class CommentsComponent implements OnInit {
   postId = '';
   constructor(
     private route: ActivatedRoute,
-    private fbService: FacebookService
+    private fbService: FacebookService,
+    private store: Store<fromPosts.State>
   ) {}
 
   ngOnInit() {
     this.postId = this.route.snapshot.paramMap.get('postId');
-    this.fbService.retrieveComments(this.postId).subscribe(res => {
-      this.comments = res.data;
-      this.prevLink = res.paging.previous;
-      this.nextLink = res.paging.next;
-      if (this.nextLink) {
-        this.loadNextComments();
-      }
-    });
+    this.store.dispatch(new postActions.LoadComments(this.postId));
+    this.store.pipe(select(fromPosts.getPosts)).subscribe(
+      comments => this.comments = comments
+    );
+    // this.fbService.retrieveComments(this.postId).subscribe(res => {
+    //   this.comments = res.data;
+    //   this.prevLink = res.paging.previous;
+    //   this.nextLink = res.paging.next;
+    //   if (this.nextLink) {
+    //     this.loadNextComments();
+    //   }
+    // });
   }
 
   selectRandomComment(): void {

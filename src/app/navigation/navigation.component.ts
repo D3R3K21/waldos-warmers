@@ -10,10 +10,11 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
-  clicked(event: MouseEvent) {
-    var current = document.getElementsByClassName('active');
+  clicked(event: any) {
+    const current = document.getElementsByClassName('active');
     current[0].className = current[0].className.replace('active', '');
     event.currentTarget.className += ' active';
     console.log('clicked');
